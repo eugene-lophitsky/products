@@ -6,7 +6,9 @@ import Basket from './pages/Basket';
 import Orders from './pages/Orders';
 import Catalog from './pages/Catalog';
 import Login from './pages/Login';
+import Registration from './pages/Registration';
 import reportWebVitals from './reportWebVitals';
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -33,6 +35,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login/>,
+  },
+  {
+    path: "/registration",
+    element: <Registration/>,
   },
 ]);
 

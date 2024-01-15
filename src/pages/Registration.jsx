@@ -1,12 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import "../pages/login.css";
+import {Link} from 'react-router-dom';
 
-const Login = () => {
-  return (
+const Registration = () => {
+    return (
     <>
       <div className="regForm"> 
-      <h2>Авторизация</h2>
+      <h2>Регистрация нового пользователя</h2>
       <label htmlFor="userName">
         Имя:
         <input type="text" id="userName" placeholder="Введите имя пользователя"/>
@@ -14,12 +13,12 @@ const Login = () => {
       <label htmlFor="password">
         Пароль:
         <input type="text" id="password" placeholder="Введите пароль"/>
+        <input type="text" id="password" placeholder="Повторите пароль"/>
       </label>
-      <button>авторизоваться</button>
-      <Link to="/registration">зарегистрироваться</Link>
+      <button>зарегистрироваться</button>
+      <Link to="/">на главную</Link>
       </div>
     </>
   );
-};
-
-export default Login;
+}
+export default Registration;

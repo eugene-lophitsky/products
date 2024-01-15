@@ -1,0 +1,49 @@
+.regForm {
+    margin: 50px 0 0 100px;
+}
+
+label {
+    font-size: 18px;
+    font-family: Calibri;
+    font-weight: 600;
+}
+
+input[type=text] {
+    display: block;
+    padding: 5px 94px 5px 10px;
+    margin: 0 0 6px 0;
+}
+
+button {
+    font-size: 15px;
+    font-family: Calibri;
+    padding: 5px 15px;
+    margin-top: 15px;
+}
+
+a:link {
+    font-size: 16px;
+    color: #000000;
+    font-family: Calibri;
+    margin: 0 0 0 10px;
+}
+
+a:visited {
+    font-size: 16px;
+    color: #860a7c;
+    font-family: Calibri;
+}
+
+a:hover {
+    font-size: 16px;
+    color: #1a3fb9;
+    font-family: Calibri;
+    text-decoration: none;
+}
+
+a:active {
+    font-size: 16px;
+    color: #cf1111;
+    font-family: Calibri;
+}
+
