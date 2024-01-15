@@ -1,27 +1,48 @@
 .title {
-  font-size: 20px;
-  font-weight: 600;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .description {
-  font-size: 18px;
+    font-size: 18px;
+    margin: 20px;
 }
 
 .price {
-  display: inline;
-  font-size: 16px;
-  color: #ffffff;
-  background-color: #464343;
+    display: inline;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #464343;
+    padding: 0 5px;
+    border-radius: 5px;
 }
 
 .product-card {
-  width: 300px;
-  margin: 50px;
-  padding: 10px;
-  border: 1px solid black;
+    width: 300px;
+    margin: 50px;
+    padding: 10px;
+    border: 1px solid black;
 }
 
 .product-list {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-card button {
+    background: #347f05;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.product-card button:hover {
+    background: #4caf0e;
+}
+
+.product-card button:active {
+    background: #2a6207;
+    box-shadow: #2a6207 1px 1px 1px 1px;
 }
