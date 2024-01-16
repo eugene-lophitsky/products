@@ -1,9 +1,11 @@
 import React from "react";
 import {Link} from 'react-router-dom';
+import Header from "../components/Header";
 
 const Registration = () => {
     return (
     <>
+      <Header />
       <div className="regForm"> 
       <h2>Регистрация нового пользователя</h2>
       <label htmlFor="userName">

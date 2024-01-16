@@ -1,0 +1,14 @@
+.main-nav {
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 20px
+  }
+
+  .link  {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #333;
+  }
+}
+

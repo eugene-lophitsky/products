@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './app/App';
 import Basket from './pages/Basket';
-import Orders from './pages/Orders';
 import Catalog from './pages/Catalog';
 import Login from './pages/Login';
 import Registration from './pages/Registration';
@@ -23,10 +22,6 @@ const router = createBrowserRouter([
   {
     path: "/basket",
     element: <Basket/>,
-  },
-  {
-    path: "/orders",
-    element: <Orders/>,
   },
   {
     path: "/catalog",

@@ -39,6 +39,7 @@ ProductsCard.propTypes = {
   description: PropTypes.string,
   price: PropTypes.number,
   showAddButton: PropTypes.bool,
+  id: PropTypes.string
 };
 
 export default ProductsCard;

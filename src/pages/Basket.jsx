@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ProductsCard from "../components/ProductsCard";
+import Header from "../components/Header";
 
 const Basket = () => {
   const [cartData, setCartData] = useState([]);
@@ -15,6 +16,7 @@ const Basket = () => {
 
   return (
     <>
+        <Header />
       <h1>Корзина: {cartData.length}</h1>
       <div>
         {cartData.map((item) => {

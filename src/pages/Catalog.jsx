@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ProductsCard from "../components/ProductsCard";
+import Header from "../components/Header";
 
 const Catalog = () => {
   const [products, setProducts] = useState([]);
@@ -12,6 +13,7 @@ const Catalog = () => {
 
   return (
     <>
+        <Header />
       <h1>Каталог товаров</h1>
 
       <div className="product-list">
