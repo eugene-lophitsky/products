@@ -5,10 +5,14 @@
     gap: 20px
   }
 
-  .link  {
+  .link {
     font-size: 1.2rem;
     text-decoration: none;
-    color: #333;
+    position: relative;
+
+    &:hover {
+      background: #f3f3f3;
+    }
   }
 }
 

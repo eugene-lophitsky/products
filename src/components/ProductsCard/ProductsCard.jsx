@@ -15,9 +15,15 @@ const ProductsCard = (props) => {
         description: props.description,
         price: props.price,
       }),
-    }).then((res) => {
-      console.log(res.json());
-    });
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        const { product } = data;
+
+        if (product?.insertedId) {
+          props.handleAddProduct(product.insertedId);
+        }
+      });
   };
 
   return (
@@ -39,7 +45,8 @@ ProductsCard.propTypes = {
   description: PropTypes.string,
   price: PropTypes.number,
   showAddButton: PropTypes.bool,
-  id: PropTypes.string
+  id: PropTypes.string,
+  handleAddProduct: PropTypes.func,
 };
 
 export default ProductsCard;
