@@ -13,7 +13,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/*",
     element: <Catalog />,
   },
   {
@@ -34,7 +34,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <RouterProvider router={router} />
+      <div className="app">
+        <RouterProvider router={router} />
+      </div>
     </Provider>
   </React.StrictMode>,
 );

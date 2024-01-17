@@ -1,5 +1,4 @@
 import React from "react";
-import ProductsCard from "../../components/ProductsCard/ProductsCard";
 import Header from "../../components/Header/Header";
 import { useSelector } from "react-redux";
 import "./cart.scss";
@@ -11,16 +10,26 @@ const Cart = () => {
       <Header numberOfProductsInCart={productsInCart?.length || 0} />
       <h1>Корзина: {productsInCart?.length}</h1>
       <div className="cart-products-list">
-        {productsInCart?.map((item) => {
-          return (
-            <ProductsCard
-              key={item.title}
-              title={item.title}
-              description={item.description}
-              price={item.price}
-            />
-          );
-        })}
+        <table>
+            <thead>
+            <tr>
+            <th>Товар</th>
+            <th>Цена</th>
+            <th>Количество</th>
+            </tr>
+            </thead>
+            <tbody>
+          {productsInCart?.map((item) => {
+            return (
+              <tr key={item._id}>
+                <td>{item.title}</td>
+                <td>{item.price}</td>
+                <td>{1}</td>
+              </tr>
+            );
+          })}
+            </tbody>
+        </table>
       </div>
     </>
   );
