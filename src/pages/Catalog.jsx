@@ -7,6 +7,8 @@ import {addOne, fetchCartProducts} from "../store/cartSlice";
 
 const Catalog = () => {
   const [products, setProducts] = useState([]);
+  // const [listView, setListView ] = useState("list");
+
   const numberOfProductsInCart = useSelector(
     (state) => state.cart.products.length,
   );
@@ -25,7 +27,12 @@ const Catalog = () => {
       <Header numberOfProductsInCart={numberOfProductsInCart} />
       <h1>Каталог товаров</h1>
 
-      <div className="product-list">
+      <div className="view-select">
+      <label htmlFor="">Список<input type="radio" name="card-view"/></label><br />
+      <label htmlFor="">Карточки<input type="radio" name="card-view"/></label>
+      </div>
+
+      <div className="product-list card-grid">
         {products.map((item) => {
           return (
             <ProductsCard

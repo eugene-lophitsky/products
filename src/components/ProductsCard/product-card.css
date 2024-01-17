@@ -18,7 +18,6 @@
 }
 
 .product-card {
-    width: 300px;
     margin: 50px;
     padding: 10px;
     border: 1px solid black;
@@ -45,4 +44,25 @@
 .product-card button:active {
     background: #2a6207;
     box-shadow: #2a6207 1px 1px 1px 1px;
+}
+
+.card-grid {
+    display: flex;
+}
+
+.card-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-grid .product-card {
+    width: 300px;
+}
+
+.card-column .product-card {
+    width: auto;
+}
+
+.view-select {
+    margin: 0 0 0 50px;
 }
