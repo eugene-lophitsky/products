@@ -14,15 +14,11 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Cart />,
+    element: <Catalog />,
   },
   {
     path: "/cart",
     element: <Cart />,
-  },
-  {
-    path: "/catalog",
-    element: <Catalog />,
   },
   {
     path: "/login",

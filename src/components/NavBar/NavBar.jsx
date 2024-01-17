@@ -9,7 +9,7 @@ const NavBar = ({ numberOfProductsInCart }) => {
     <nav className="main-nav">
       <ul>
         <li>
-          <StyledNavLink to="/catalog" text="Каталог товаров" />
+          <StyledNavLink to="/" text="Каталог товаров" />
         </li>
         <li>
           <StyledNavLink
