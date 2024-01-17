@@ -23,7 +23,12 @@ const Catalog = () => {
   }, []);
 
   function changeView () {
-    setListView(!listView);
+    if(listView==="card-grid"){
+      setListView("card-column");
+    } else if (listView==="card-column") {
+      setListView("card-grid");
+    }
+    
   }
 
   return (
@@ -32,11 +37,11 @@ const Catalog = () => {
       <h1>Каталог товаров</h1>
 
       <div className="view-select">
-      <label htmlFor="">Список<input type="radio" name="card-view" onChange={changeView} /></label><br />
-      <label htmlFor="">Карточки<input type="radio" name="card-view" onChange={changeView}/></label>
+      <label htmlFor="">Карточки<input type="radio" name="card-view" onChange={changeView} checked={listView==="card-grid"}/></label><br />
+      <label htmlFor="">Список<input type="radio" name="card-view" onChange={changeView} checked={listView==="card-column"}/></label>
       </div>
 
-      <div className={listView ? "card-grid" : "card-column"} >
+      <div className={listView==="card-grid" ? "card-grid" : "card-column"} >
         {products.map((item) => {
           return (
             <ProductsCard
