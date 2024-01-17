@@ -4,8 +4,7 @@
 }
 
 .description {
-    font-size: 18px;
-    margin: 20px;
+    margin: 20px 0;
 }
 
 .price {
@@ -54,6 +53,7 @@
 .card-column {
     display: flex;
     flex-direction: column;
+    max-width: 800px;
 }
 
 .card-grid .product-card {

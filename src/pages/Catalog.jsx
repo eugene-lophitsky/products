@@ -50,6 +50,7 @@ const Catalog = () => {
           <div>
             <Link to="/street_food">Street food</Link>
           </div>
+
         </div>
         <div className="main-content">
           <div className="flex align-c">
