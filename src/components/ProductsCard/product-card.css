@@ -48,6 +48,7 @@
 
 .card-grid {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .card-column {

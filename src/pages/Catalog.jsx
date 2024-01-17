@@ -7,7 +7,7 @@ import {addOne, fetchCartProducts} from "../store/cartSlice";
 
 const Catalog = () => {
   const [products, setProducts] = useState([]);
-  // const [listView, setListView ] = useState("list");
+  const [listView, setListView ] = useState("card-grid");
 
   const numberOfProductsInCart = useSelector(
     (state) => state.cart.products.length,
@@ -22,17 +22,21 @@ const Catalog = () => {
     dispatch(fetchCartProducts());
   }, []);
 
+  function changeView () {
+    setListView(!listView);
+  }
+
   return (
     <>
       <Header numberOfProductsInCart={numberOfProductsInCart} />
       <h1>Каталог товаров</h1>
 
       <div className="view-select">
-      <label htmlFor="">Список<input type="radio" name="card-view"/></label><br />
-      <label htmlFor="">Карточки<input type="radio" name="card-view"/></label>
+      <label htmlFor="">Список<input type="radio" name="card-view" onChange={changeView} /></label><br />
+      <label htmlFor="">Карточки<input type="radio" name="card-view" onChange={changeView}/></label>
       </div>
 
-      <div className="product-list card-grid">
+      <div className={listView ? "card-grid" : "card-column"} >
         {products.map((item) => {
           return (
             <ProductsCard
@@ -48,6 +52,7 @@ const Catalog = () => {
             />
           );
         })}
+        {listView}
       </div>
     </>
   );
